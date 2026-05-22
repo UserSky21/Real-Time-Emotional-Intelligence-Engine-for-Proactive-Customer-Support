@@ -1,31 +1,29 @@
 
 # Real-Time-Emotional-Intelligence-Engine-for-Proactive-Customer-Support
 
-This is a simple website that allows users to input either a YouTube video URL or a sentence and get a binary sentiment classification prediction based on a pre-trained deep learning model. The model was built using TensorFlow and Keras, and uses a Bidirectional LSTM architecture with an embedding layer.
+This is a comprehensive web application that allows users to input a YouTube video URL, an Amazon product link, or a direct sentence to get a binary sentiment classification prediction. The engine is powered by a pre-trained deep learning model built using TensorFlow and Keras, utilizing a Bidirectional LSTM architecture with an embedding layer to analyze customer feedback and public sentiment in real-time.
 
 ## Tech Stack
 
-- Tech Stack
-- Python
-- Flask
-- HTML/CSS
-- TensorFlow
-- Keras
-- YouTube API
-- BeautifulSoup logic for Amazon
-
+- **Backend & Framework:** Python, Flask, Pandas
+- **Machine Learning:** TensorFlow, Keras (Bidirectional LSTM)
+- **Frontend:** HTML, CSS
+- **APIs & Scraping:** - YouTube Data API v3
+  - BeautifulSoup4 (bs4) 
+  - `curl_cffi` (For advanced TLS fingerprint spoofing and WAF bypass)
+- **Environment Management:** `python-dotenv`
 ## Installation
 
 To run the website, you will need to have Python 3 installed. You can clone this repository using the following command:
 
 ```bash
-https://github.com/UserSky21/sentiment-analysis-software.git
+https://github.com/UserSky21/Real-Time-Emotional-Intelligence-Engine-for-Proactive-Customer-Support.git
 ```
 
 Next, navigate to the cloned directory and install the required Python packages using pip:
 
 ```bash
-cd sentiment-analysis-software
+cd Real-Time-Emotional-Intelligence-Engine-for-Proactive-Customer-Support
 pip install -r requirements.txt
 ```
 
@@ -34,7 +32,14 @@ pip install -r requirements.txt
 ```bash
 python essential.py
 ```
+## Create a file named exactly .env and add the following configuration:
+```bash
+# YouTube Data API v3 Key
+YOUTUBE_API_KEY=your_api_key_here
 
+# Suppresses TensorFlow oneDNN floating-point warnings in the console
+TF_ENABLE_ONEDNN_OPTS=0
+```
 ## Usage
 
 To run the website, simply run the app.py file using Python:
@@ -59,7 +64,7 @@ To analyze customer feedback from an Amazon product, enter the Amazon product UR
 
 ## How it works
 
-The website uses a pre-trained deep learning model to make binary sentiment classification predictions on text data. The model is based on a Bidirectional LSTM architecture, which allows the model to process the text in both forward and backward directions, capturing both the past and future context of the text.
+The website uses a trained deep learning model to make binary sentiment classification predictions on text data. The model is based on a Bidirectional LSTM architecture, which allows the model to process the text in both forward and backward directions, capturing both the past and future context of the text.
 
 The model is trained using a binary cross-entropy loss function and optimized using the Adam optimizer. The input text is first processed using an embedding layer, which converts each word into a vector representation. The embedding layer is followed by two Bidirectional LSTM layers, which process the text data in both directions. The output of the second LSTM layer is then passed through a Dense layer with a ReLU activation function, followed by a Dropout layer with a dropout rate of 0.5. Finally, the output is passed through a Dense layer with a sigmoid activation function, which produces a binary sentiment classification prediction.
 
@@ -92,7 +97,7 @@ If you want to use your own pre-trained model, you can replace the model.keras f
 
 ## Credits
 
-This website was developed as part of a project for the course BCE-P861 Major Project with research paper. The pre-trained model was developed using the Sentiment140 dataset, which can be found at https://www.kaggle.com/datasets/kazanova/sentiment140 and IMDB Movie Rating dataset, which can be found at https://www.kaggle.com/datasets/yasserh/imdb-movie-ratings-sentiment-analysis
+This website was developed as part of a project for the course BCE-P861 Major Project with research paper. The trained model was developed using the Sentiment140 dataset, which can be found at https://www.kaggle.com/datasets/kazanova/sentiment140 and IMDB Movie Rating dataset, which can be found at https://www.kaggle.com/datasets/yasserh/imdb-movie-ratings-sentiment-analysis
 
 
 ## Authors

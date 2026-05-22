@@ -73,12 +73,15 @@ The model is trained using a binary cross-entropy loss function and optimized us
 If you want to use your own pre-trained model, you can replace the model.keras file in the models directory with your own model file. Make sure the model file is in the Keras format (*.keras) and has the same architecture as the provided model.
 
 ## Features
-- Can handle two types of inputs: YouTube video URL or a sentence
-- Scrapes comments from YouTube video using YouTube API and stores them in a CSV file
-- Performs sentiment analysis on the comments stored in the CSV file
-- Accepts a sentence as input and performs sentiment analysis on it
-- Displays the percentage of positive and negative comments or sentence
-- User-friendly web interface
+Multi-Source Ingestion: Handles direct text, YouTube URLs, and Amazon Product URLs.
+
+Advanced Data Extraction: Implements WAF bypass logic to scrape data dynamically without triggering bot-protection CAPTCHAs.
+
+Automated Pipeline: Seamlessly moves data from web scraper -> CSV storage -> Pandas dataframe -> NLP tokenization -> ML Prediction.
+
+Theme Extraction: Identifies and displays core discussion topics by filtering standard stopwords.
+
+Clean UI: User-friendly, responsive web interface for displaying complex data metrics.
 
 ## Roadmap
 

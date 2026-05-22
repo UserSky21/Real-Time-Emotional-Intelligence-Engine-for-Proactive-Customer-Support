@@ -1,0 +1,38 @@
+# =========================
+# Security & Environment
+# =========================
+# NEVER commit your API keys or secrets!
+.env
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# =========================
+# Project Specific Files
+# =========================
+# Keep local datasets and ML outputs out of version control
+comment.csv
+comment_bs4.csv
+
+# Ignore the temporary scraper debugging files
+debug_page.html
+debug_captcha.html
+amazon_error_screenshot.png
+
+# =========================
+# Python Caches & Compiled Files
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# =========================
+# OS & IDE Specific Files
+# =========================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
